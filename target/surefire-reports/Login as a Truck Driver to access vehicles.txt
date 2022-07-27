@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: Login as a Truck Driver to access vehicles
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 5.979 s <<< FAILURE! - in Login as a Truck Driver to access vehicles
+Login as a Truck Driver to access vehicles.Login, navigate to Fleet, select vehicles, click on any car, add event, reset settings.  Time elapsed: 5.979 s  <<< ERROR!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <tr class="grid-row row-click-action">...</tr> is not clickable at point (624, 266). Other element would receive the click: <fieldset class="form form-horizontal">...</fieldset>
+  (Session info: chrome=103.0.5060.134)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-8IB078Q', ip: '192.168.0.133', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\oleks\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54116}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 477a0893569f30b6162fc02701c171b0
+
