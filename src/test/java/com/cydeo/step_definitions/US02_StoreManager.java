@@ -9,6 +9,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.java.eo.Se;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -98,9 +99,16 @@ public class US02_StoreManager {
         p2.VMakeButton.click();
         p2.MakeAssigned.click();
         p2.selectButton.click();
-        a1.moveToElement(p2.SaveAndCloseButton).perform();
-        p2.SaveAndCloseButton.click();
-        Thread.sleep(2000);
+
+        p2.radio1.click();
+        p2.radio2.click();
+        a1.moveToElement(p2.saveAndCloseDropdown).click().perform();
+        a1.moveToElement(p2.saveSelection).click().perform();
+        w1.until(ExpectedConditions.visibilityOf(p2.saveAndCloseButton));
+        a1.moveToElement(p2.saveAndCloseButton).click().perform();
+        p2.saveAndCloseButton.click();
+
+        Thread.sleep(5000);
 
 
 //        p2.manageFilter.click();

@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/VyTrack_Features",
         glue = "com/cydeo/step_definitions",
         dryRun = false,
-        tags = "@US2.1",
+        tags = "@smoke",
         publish=true
 )
 public class CukesRunner {

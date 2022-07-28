@@ -100,13 +100,19 @@ public class VyTrackStoreManager_title_page extends VyTrackLogin_page{
     @FindBy (xpath = "(//tr[@class='grid-row']/td/input)[1]")
     public WebElement ModelAssigned;
 
-    @FindBy (xpath = "//div[@class='pull-right pinned-dropdown']/div[@class='btn-group pull-right']/button")
-    public WebElement SaveAndCloseButton;
+    @FindBy (xpath = "(//input[@class='default-selector'])[1]")
+    public WebElement radio1;
 
-    @FindBy (xpath = "//div[@class='btn-group pull-right']//a[@data-toggle='dropdown']")
+    @FindBy (xpath = "(//input[@class='default-selector'])[2]")
+    public WebElement radio2;
+
+    @FindBy (xpath = "//button[@type='submit'][@class='btn btn-success main-group action-button']")
+    public WebElement saveAndCloseButton;
+
+    @FindBy (xpath = "//a[@class='btn-success btn dropdown-toggle']")
     public WebElement saveAndCloseDropdown;
 
-    @FindBy (xpath = "(//ul[@class='dropdown-menu']/li/button[@type='submit'])[1]")
+    @FindBy (xpath = "(//button[@type='submit'][@class='main-group action-button dropdown-item'])[2]")
     public WebElement saveSelection;
 
     @FindBy (xpath = "//a[@class='add-filter-button']")
