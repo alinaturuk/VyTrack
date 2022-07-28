@@ -1,4 +1,4 @@
-@US2.1
+@smoke
 Feature: Create a vehicle as a store manager
 @S2.1
   Scenario: user should be able to: click on create a car, click on cancel a car
