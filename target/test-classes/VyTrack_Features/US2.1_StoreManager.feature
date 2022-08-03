@@ -16,7 +16,8 @@ Feature: Create a vehicle as a store manager
     And user clicks on Vehicles
     And user clicks on create a car
     When user creates a car with Vehicle module and make
-    And user clicks on Create car
+    Then user navigates to Fleet module as a Store Manager
+    And user clicks on Vehicles
     Then user is on all-cars page where new car is listed
 
 

@@ -106,8 +106,14 @@ public class VyTrackStoreManager_title_page extends VyTrackLogin_page{
     @FindBy (xpath = "(//input[@class='default-selector'])[2]")
     public WebElement radio2;
 
-    @FindBy (xpath = "//button[@type='submit'][@class='btn btn-success main-group action-button']")
+    @FindBy (xpath = "(//button[@type='submit'])[1]")
     public WebElement saveAndCloseButton;
+
+    @FindBy (xpath = "//*[.='Entity saved']")
+    public WebElement msgPopUp;
+
+    @FindBy (linkText = "Entities")
+    public WebElement entities;
 
     @FindBy (xpath = "//a[@class='btn-success btn dropdown-toggle']")
     public WebElement saveAndCloseDropdown;
@@ -115,7 +121,13 @@ public class VyTrackStoreManager_title_page extends VyTrackLogin_page{
     @FindBy (xpath = "(//button[@type='submit'][@class='main-group action-button dropdown-item'])[2]")
     public WebElement saveSelection;
 
-    @FindBy (xpath = "//a[@class='add-filter-button']")
+    @FindBy (xpath = "//input[@type='number']")
+    public WebElement pageFilter;
+
+    @FindBy (xpath = "(//tr[@class='grid-row']/td)[2]")
+    public WebElement licencePlateAssert;
+
+    @FindBy (linkText = "Manage filters")
     public WebElement manageFilter;
 
     @FindBy (xpath = "//input[@value='LicensePlate']")

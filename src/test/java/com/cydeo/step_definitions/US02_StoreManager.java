@@ -9,8 +9,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.java.eo.Se;
 import org.junit.Assert;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -64,7 +63,7 @@ public class US02_StoreManager {
 
     //////////////////////////////////////////////////////////////
     @When("user creates a car with Vehicle module and make")
-    public void user_creates_a_car_with_vehicle_module_and_make() throws InterruptedException {
+    public void user_creates_a_car_with_vehicle_module_and_make(){
 
         p2.licencePlate.sendKeys("234ER56");
         p2.tags_senior.click();
@@ -87,7 +86,7 @@ public class US02_StoreManager {
         p2.fuelType.click();
         p2.gasoline.click();
 
-        p2.emission.sendKeys("Clean-idle");
+        p2.emission.sendKeys("200");
         p2.horsePower.sendKeys("700");
         p2.horsePowerTaxation.sendKeys("300");
         p2.power.sendKeys("1300");
@@ -102,41 +101,31 @@ public class US02_StoreManager {
 
         p2.radio1.click();
         p2.radio2.click();
-        a1.moveToElement(p2.saveAndCloseDropdown).click().perform();
-        a1.moveToElement(p2.saveSelection).click().perform();
-        w1.until(ExpectedConditions.visibilityOf(p2.saveAndCloseButton));
-        a1.moveToElement(p2.saveAndCloseButton).click().perform();
-        p2.saveAndCloseButton.click();
+        p2.saveAndCloseButton.sendKeys(Keys.ENTER);
+        String actual = "Entity saved";
 
-        Thread.sleep(5000);
-
-
-//        p2.manageFilter.click();
-//
-//        p2.licencePlateBox.click();
-//
-//        p2.filterAll.click();
-//
-//        p2.filterBox.sendKeys("234ER56");
-//
-//        p2.update.click();
-
-
+        Assert.assertEquals(actual,p2.msgPopUp.getText());
 
     }
-    @When("user clicks on Create car")
-    public void user_clicks_on_create_car() {
 
 
-    }
     @Then("user is on all-cars page where new car is listed")
-    public void user_is_on_all_cars_page_where_new_car_is_listed() {
+    public void user_is_on_all_cars_page_where_new_car_is_listed() throws InterruptedException {
+
+     p2.pageFilter.clear();
+     p2.pageFilter.sendKeys("50");
+     p2.pageFilter.sendKeys(Keys.ENTER);
+
+     String actual = p2.licencePlateAssert.getText();
+     String expected ="234ER56" ;//
+
+     Assert.assertEquals(expected,actual);
 
 
     }
     ///////////////////////////////////////////////////////////
     @Given("user clicks on created car")
-    public void user_clicks_on_created_car() {
+    public void user_clicks_on_created_car(){
 
 
     }

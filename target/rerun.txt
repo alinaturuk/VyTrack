@@ -1,1 +1,0 @@
-file:src/test/resources/VyTrack_Features/US2.1_StoreManager.feature:13
